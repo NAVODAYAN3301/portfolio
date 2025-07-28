@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function(){
   // eslint-disable-next-line no-undef
   new Typed('#typewriter', {
     strings: [
-      "Hi, I’m Himanshu.",
+      "Hi, I’m Himanshu Verma.",
       "Cybersecurity Enthusiast.",
       "Aspiring Full-Stack Developer.",
       "Node.js & DevOps Learner."
