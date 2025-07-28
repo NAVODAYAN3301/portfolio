@@ -32,12 +32,15 @@ const swiper = new Swiper('.swiper-container', {
 });
 
 // GSAP glass panel animation on scroll
-gsap.utils.toArray('.glass-panel').forEach(function(panel, idx){
-  gsap.from(panel, {
-    opacity: 0, y: 70, duration: 0.8, delay: idx*0.12,
-    scrollTrigger: {trigger: panel, start:"top 90%"}
+if (window.gsap && window.gsap.utils && window.ScrollTrigger) {
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.utils.toArray('.glass-panel').forEach(function(panel, idx){
+    gsap.from(panel, {
+      opacity: 0, y: 70, duration: 0.8, delay: idx*0.12,
+      scrollTrigger: {trigger: panel, start:"top 90%"}
+    });
   });
-});
+}
 
 // Custom animated cursor
 const cursor = document.querySelector('.custom-cursor');
@@ -57,4 +60,3 @@ document.querySelectorAll('a, .skills-list span, .project-card').forEach(el => {
     cursor.style.height = '34px';
   });
 });
-
