@@ -1,1 +1,146 @@
+body {
+  margin: 0;
+  font-family: 'Oswald', Arial, sans-serif;
+  background: linear-gradient(135deg, #18122b, #2b227e 80%, #191040 100%);
+  color: #F5F5F7;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background: rgba(24, 18, 43, 0.85);
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 6vw;
+  z-index: 100;
+}
+.navbar .nav-brand { font-size: 1.7em; font-weight: bold; letter-spacing: 2px; color: #f93cff;}
+.navbar ul {
+  display: flex; gap: 32px; list-style: none;
+}
+.navbar a {
+  color: #a0fff7; text-decoration: none; font-weight: 500; position: relative; padding: 6px 0;
+  transition: color 0.22s;
+}
+.navbar a::after {
+  content:'';
+  display:block; width:0; height: 2.5px;
+  background:linear-gradient(90deg,#f93cff 25%,#3fffc6 100%);
+  transition: width 0.32s;
+}
+.navbar a:hover, .navbar a.active { color:#f93cff;}
+.navbar a:hover::after { width:100%; }
+
+.hero {
+  position: relative;
+  min-height: 62vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 80px 5vw;
+  z-index: 1;
+}
+.hero-bg {
+  position: absolute;
+  width: 130vw; height: 120vh;
+  background: radial-gradient(circle at 60% 60%, #f93cff66 0%, #3fffc6bb 80%, #18122b 100%);
+  filter: blur(80px) brightness(1.12);
+  z-index: 0;
+  left: -20vw; top: -15vh; pointer-events: none;
+  animation: animeBg 18s infinite alternate ease-in-out;
+}
+@keyframes animeBg {
+  0% { filter:blur(80px) brightness(1.08);}
+  100% { filter: blur(140px) brightness(1.25);}
+}
+.big-animated {
+  font-size: 5vw;
+  color: #fff;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 8px 30px #18122baa, 0 1px 0 #fff2;
+  animation: floatIn 1s cubic-bezier(.29,1.01,1,.99) backwards;
+}
+.accent { color: #f93cff; }
+.typewriter {
+  font-size: 1.6em;
+  color: #3fffc6;
+  letter-spacing: 1.2px;
+  min-height:2em;
+}
+
+.glass-panel {
+  backdrop-filter: blur(24px);
+  background: rgba(34,34,62,0.24);
+  border-radius: 32px;
+  margin: 2.8em auto 2.5em;
+  max-width: 1150px;
+  box-shadow: 0 8px 40px #19074442;
+  padding: 44px 6vw 32px 6vw;
+  border: 1.3px solid rgba(150,180,225,0.14);
+  position: relative;
+}
+h2 { display: flex; align-items: center; gap: 11px; margin-bottom: 18px; }
+.skills-list {
+  display: flex; flex-wrap: wrap;
+  gap: 18px; margin-top: 10px;
+}
+.skills-list span {
+  background: rgba(174,240,255,0.16);
+  color: #aef0ff;
+  padding: 10px 18px;
+  border-radius: 19px;
+  font-size: 1.12em;
+  display: flex; align-items: center; gap: 9px;
+  box-shadow: 0 1px 7px #3fffc632;
+  transition: transform 0.15s;
+  cursor:pointer;
+}
+.skills-list span:hover {
+  transform: translateY(-4px) scale(1.08) rotate(-2deg);
+  background: rgba(249,60,255,.27);
+}
+.projects-section .swiper-container { width: 100%; padding: 22px 0; }
+.swiper-wrapper { display: flex; }
+.project-card {
+  background:rgba(30,25,85,0.82);
+  border-radius:22px;
+  box-shadow:0 6px 22px #01002830;
+  padding:30px 18px 20px 18px;
+  min-width:320px; min-height: 180px;
+  margin:0 8px;
+  color:#fff;
+  display:flex; flex-direction:column;
+  justify-content: center;
+  align-items: flex-start;
+  transition: transform .21s cubic-bezier(.21,.62,.43,1.4);
+}
+.swiper-slide-active .project-card {
+  transform:scale(1.05) translateY(-4px);
+  background:rgba(249,60,255,0.16);
+}
+
+footer {
+  text-align: center; margin: 26px 0 10px 0; color: #aaa; font-size: 1.04em;
+}
+
+@media (max-width: 900px) {
+  .glass-panel, .hero {max-width: 97vw; padding-left: 2vw; padding-right: 2vw;}
+  .big-animated {font-size:2.4em;}
+}
+
+.custom-cursor {
+  pointer-events: none; z-index: 10000; position: fixed; left: 0; top: 0;
+  background: radial-gradient(circle, #f93cff 0%, #3fffc6 80%, transparent 100%);
+  width: 34px; height: 34px; border-radius: 50%; opacity: 0.45;transform: translate(-50%,-50%);
+  mix-blend-mode: lighten; transition: width .1s, height .1s, opacity .18s;
+}
 
