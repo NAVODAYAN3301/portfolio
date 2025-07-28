@@ -6,7 +6,6 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
-
 .navbar {
   position: sticky;
   top: 0;
@@ -34,7 +33,6 @@ body {
 }
 .navbar a:hover, .navbar a.active { color:#f93cff;}
 .navbar a:hover::after { width:100%; }
-
 .hero {
   position: relative;
   min-height: 62vh;
@@ -76,7 +74,6 @@ body {
   letter-spacing: 1.2px;
   min-height:2em;
 }
-
 .glass-panel {
   backdrop-filter: blur(24px);
   background: rgba(34,34,62,0.24);
@@ -127,20 +124,16 @@ h2 { display: flex; align-items: center; gap: 11px; margin-bottom: 18px; }
   transform:scale(1.05) translateY(-4px);
   background:rgba(249,60,255,0.16);
 }
-
 footer {
   text-align: center; margin: 26px 0 10px 0; color: #aaa; font-size: 1.04em;
 }
-
 @media (max-width: 900px) {
   .glass-panel, .hero {max-width: 97vw; padding-left: 2vw; padding-right: 2vw;}
   .big-animated {font-size:2.4em;}
 }
-
 .custom-cursor {
   pointer-events: none; z-index: 10000; position: fixed; left: 0; top: 0;
   background: radial-gradient(circle, #f93cff 0%, #3fffc6 80%, transparent 100%);
   width: 34px; height: 34px; border-radius: 50%; opacity: 0.45;transform: translate(-50%,-50%);
   mix-blend-mode: lighten; transition: width .1s, height .1s, opacity .18s;
 }
-
