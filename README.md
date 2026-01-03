@@ -10,7 +10,8 @@ This portfolio demonstrates my professional journey, technical skills, certifica
 
 ## 🚀 Live Portfolio
 
-Experience the command center: [Portfolio Dashboard](#) <!-- Update with deployment URL -->
+Experience the command center: [Portfolio Dashboard](https://portfolio-five-lemon-29.vercel.app
+) <!-- Update with deployment URL -->
 
 ---
 
